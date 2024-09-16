@@ -63,6 +63,9 @@ body{
   clear: both;
 }
 
+.botMsg{
+white-space: pre-wrap !important;
+}
 .outgoing {
   width: 60%;
   /* background-color: #f2f2f2; */

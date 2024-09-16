@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Divider from "../components/Divider";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Messages from "../components/Messages";
+import Messages from "../components/Messages.jsx";
+import {BotReply, } from '../utils/responseSet.js'
 
 // { from: "computer", text: "" },
 // { from: "me", text: "" },
@@ -19,14 +20,19 @@ const Chat = () => {
       return;
     }
     const data = inputMessage;
+    
 
     setMessages((old) => [...old, { from: "me", text: data }]);
     setInputMessage("");
 
     setTimeout(() => {
-      setMessages((old) => [...old, { from: "computer", text: data }]);
+      BotReply(data);
+      setMessages((old) => [...old, { from: "computer", text: BotReply(data)}]);
     }, 1000);
+    
   };
+
+
 
   return (
     <Flex  h="100vh" justify="center" align="center" style={{width:"900px"}}>

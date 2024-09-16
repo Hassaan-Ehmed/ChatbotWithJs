@@ -13,7 +13,7 @@ const Messages = ({ messages }) => {
       {messages.map((item, index) => {
         if (item.from === "me") {
           return (
-            <Flex key={index} w="100%" justify="flex-end">
+            <Flex key={index} w="100%" justify="flex-end" >
               <Flex
                 bg="black"
                 color="white"
@@ -22,7 +22,9 @@ const Messages = ({ messages }) => {
                 my="1"
                 p="3"
               >
+                
                 <Text>{item.text}</Text>
+                {/* <Text>{item.text}</Text> */}
               </Flex>
             </Flex>
           );
@@ -42,7 +44,7 @@ const Messages = ({ messages }) => {
                 my="1"
                 p="3"
               >
-                <Text>{item.text}</Text>
+                <Text className="botMsg" >{item.text}</Text>
               </Flex>
             </Flex>
           );
