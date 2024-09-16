@@ -1,12 +1,18 @@
-
 body{
-  background-color: white;
-width: 100%;
+
+  background-color:white;
+  width: 100%;
   
 }
 
+
+.css-h74a88{
+  
+  background-color: #8174F4 !important;
+}
+
 .main-box{
-  background-color: #8174F4;
+  /* background-color: #8174F4; */
   width: 800px;
   display: flex;
   justify-content: center;
